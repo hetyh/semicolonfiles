@@ -19,7 +19,7 @@ require("lazy").setup({
     { "catppuccin/nvim",                  name = "catppuccin", priority = 1000 },
     { "ThePrimeagen/harpoon",             branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" } },
     { "mbbill/undotree" },
-    { "/tpope/vim-fugitive" },
+    { "tpope/vim-fugitive" },
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
 
