@@ -14,20 +14,41 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { 'nvim-treesitter/nvim-treesitter',  run = ":TSUpdate" },
-    { 'nvim-telescope/telescope.nvim',    tag = '1.1.6',       dependencies = { "nvim-lua/plenary.nvim" } },
-    { "catppuccin/nvim",                  name = "catppuccin", priority = 1000 },
-    { "ThePrimeagen/harpoon",             branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" } },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        run = ":TSUpdate"
+    },
+    {
+        'nvim-telescope/telescope.nvim',
+        tag = '1.1.6',
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000
+    },
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" }
+    },
     { "mbbill/undotree" },
     { "tpope/vim-fugitive" },
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
-
-    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+    {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x'
+    },
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/nvim-cmp' },
-    { 'L3MON4D3/LuaSnip' },
+    { 'rafamadriz/friendly-snippets' },
+    {
+        'L3MON4D3/LuaSnip',
+        dependencies = { "rafamadriz/friendly-snippets" }
+    },
     {
         'https://github.com/fresh2dev/zellij.vim.git',
         lazy = false,
@@ -35,3 +56,5 @@ require("lazy").setup({
 })
 
 vim.cmd("colorscheme catppuccin-macchiato")
+
+require("luasnip.loaders.from_vscode").lazy_load()
