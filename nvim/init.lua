@@ -52,7 +52,8 @@ require("lazy").setup({
     {
         'https://github.com/fresh2dev/zellij.vim.git',
         lazy = false,
-    }
+    },
+    { 'sindrets/diffview.nvim' }
 })
 
 vim.cmd("colorscheme catppuccin-macchiato")
